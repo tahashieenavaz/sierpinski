@@ -1,5 +1,5 @@
 import { isolate as _isolate } from "@/helpers";
-import type { IsolateCallbackFunction } from "./typing";
+import type { IsolateCallbackFunction } from "@/typing";
 
 export default class Board {
   element: HTMLCanvasElement = document.createElement("canvas");
