@@ -6,6 +6,11 @@ export default class Board {
   constructor() {
     this.resizeCanvasElement();
     this.fireCanvasElementEvents();
+    this.appendCanvasElement();
+  }
+
+  appendCanvasElement(): void {
+    window.document.body.append(this.element);
   }
 
   resizeCanvasElement() {
