@@ -1,7 +1,9 @@
 export default class Board {
-  element: HTMLElement;
+  element: HTMLCanvasElement;
 
   constructor() {
     this.element = document.createElement("canvas");
+    this.element.width = innerWidth;
+    this.element.height = innerWidth;
   }
 }
