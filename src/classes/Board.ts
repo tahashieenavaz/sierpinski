@@ -16,7 +16,7 @@ export default class Board {
 
   resizeCanvasElement() {
     this.element.width = innerWidth;
-    this.element.height = innerWidth;
+    this.element.height = innerHeight;
   }
 
   fireCanvasElementEvents() {
