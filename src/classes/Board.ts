@@ -1,4 +1,5 @@
 import { isolate as _isolate } from "@/helpers";
+import type { IsolateCallbackFunction } from "./typing";
 
 export default class Board {
   element: HTMLCanvasElement = document.createElement("canvas");
@@ -22,7 +23,7 @@ export default class Board {
     window.addEventListener("resize", this.resizeCanvasElement);
   }
 
-  isolate(callback: Function): void {
+  isolate(callback: IsolateCallbackFunction): void {
     _isolate(this.element, callback);
   }
 }

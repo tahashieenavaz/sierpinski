@@ -1,6 +1,4 @@
-type IsolateCallbackFunction = (
-  context: CanvasRenderingContext2D | null,
-) => void;
+import type { IsolateCallbackFunction } from "./typing";
 
 export function isolate(
   element: HTMLCanvasElement,
