@@ -12,8 +12,6 @@ export default class Board {
   }
 
   fireCanvasElementEvents() {
-    window.addEventListener("resize", () => {
-      this.resizeCanvasElement();
-    });
+    window.addEventListener("resize", this.resizeCanvasElement);
   }
 }
