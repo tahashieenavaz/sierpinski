@@ -1,3 +1,5 @@
+import { isolate as _isolate } from "@/helpers";
+
 export default class Board {
   element: HTMLCanvasElement = document.createElement("canvas");
 
@@ -15,7 +17,7 @@ export default class Board {
     window.addEventListener("resize", this.resizeCanvasElement);
   }
 
-  context() {
-    return this.element.getContext("2d");
+  isolate(callback: Function): void {
+    _isolate(this.element, callback);
   }
 }
