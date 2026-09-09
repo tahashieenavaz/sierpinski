@@ -15,10 +15,10 @@ export default class Board {
     window.document.body.append(this.element);
   }
 
-  resizeCanvasElement() {
+  resizeCanvasElement = (): void => {
     this.element.width = innerWidth;
     this.element.height = innerHeight;
-  }
+  };
 
   fireCanvasElementEvents() {
     window.addEventListener("resize", this.resizeCanvasElement);
