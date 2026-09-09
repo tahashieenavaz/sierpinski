@@ -3,10 +3,17 @@ export default class Board {
 
   constructor() {
     this.resizeCanvasElement();
+    this.fireCanvasElementEvents();
   }
 
   resizeCanvasElement() {
     this.element.width = innerWidth;
     this.element.height = innerWidth;
+  }
+
+  fireCanvasElementEvents() {
+    window.addEventListener("resize", () => {
+      this.resizeCanvasElement();
+    });
   }
 }
