@@ -2,9 +2,10 @@ import { isolate as _isolate } from "@/helpers";
 import type { IsolateCallbackFunction } from "@/typing";
 
 export default class Board {
-  element: HTMLCanvasElement = document.createElement("canvas");
+  element: HTMLCanvasElement;
 
   constructor() {
+    this.element = document.createElement("canvas");
     this.resizeCanvasElement();
     this.fireCanvasElementEvents();
     this.appendCanvasElement();
