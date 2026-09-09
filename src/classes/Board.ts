@@ -14,4 +14,8 @@ export default class Board {
   fireCanvasElementEvents() {
     window.addEventListener("resize", this.resizeCanvasElement);
   }
+
+  context() {
+    return this.element.getContext("2d");
+  }
 }
