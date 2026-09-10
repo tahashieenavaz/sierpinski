@@ -8,10 +8,6 @@ const board = new Board();
 const containerTriangle = new ContainerTriangle();
 containerTriangle.draw(board);
 
-function triangleArea(A: Point, B: Point, C: Point) {
-  return Math.abs(A.x * (B.y - C.y) + B.x * (C.y - A.y) + C.x * (A.y - B.y));
-}
-
 function isInsideTriangle(P: Point, A: Point, B: Point, C: Point) {
   const a = triangleArea(P, A, B);
   const b = triangleArea(P, B, C);
