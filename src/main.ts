@@ -8,15 +8,6 @@ const board = new Board();
 const containerTriangle = new ContainerTriangle();
 containerTriangle.draw(board);
 
-function isInsideTriangle(P: Point, A: Point, B: Point, C: Point) {
-  const a = triangleArea(P, A, B);
-  const b = triangleArea(P, B, C);
-  const c = triangleArea(P, C, A);
-  console.log(Math.abs(triangleArea(A, B, C) - a - b - c));
-
-  return Math.abs(triangleArea(A, B, C) - a - b - c) <= 0.001;
-}
-
 window.addEventListener("mousemove", (e) => {
   const P = new Point(e.x, e.y);
   if (
