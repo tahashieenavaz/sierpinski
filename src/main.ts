@@ -1,10 +1,12 @@
 import "@stylesheets/style.css";
+
 import Board from "@/classes/Board";
 import ContainerTriangle from "@/classes/ContainerTriangle";
 import Point from "./classes/Point";
 
-const board = new Board();
+import isInsideTriangle from "@/functions/isInsideTriangle";
 
+const board = new Board();
 const containerTriangle = new ContainerTriangle();
 containerTriangle.draw(board);
 
