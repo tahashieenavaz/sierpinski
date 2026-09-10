@@ -6,3 +6,7 @@ const board = new Board();
 
 const containerTriangle = new ContainerTriangle();
 containerTriangle.draw(board);
+
+window.addEventListener("mousemove", (e) => {
+  console.log(e.x, e.y);
+});

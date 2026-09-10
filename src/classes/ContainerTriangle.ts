@@ -1,4 +1,5 @@
 import type Board from "./Board";
+import Point from "@/classes/Point";
 
 export default class ContainerTriangle {
   draw(board: Board) {
