@@ -16,5 +16,6 @@ export default function pointInTriangle(
     x = randomNumber(0, x_range);
     y = randomNumber(0, y_range);
   }
+
   return new Point(x, y);
 }
