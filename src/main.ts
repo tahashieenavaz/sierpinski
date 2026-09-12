@@ -11,6 +11,7 @@ const point = pointInTriangle(
   containerTriangle.B,
   containerTriangle.C,
 );
+
 board.isolate((context) => {
   context.arc(point.x, point.y, 1, 0, Math.PI * 2);
   context.fillStyle = "black";
