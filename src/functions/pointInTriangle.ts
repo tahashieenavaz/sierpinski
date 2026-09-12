@@ -12,7 +12,7 @@ export default function pointInTriangle(
   let x = randomNumber(0, x_range);
   let y = randomNumber(0, y_range);
 
-  while (isInsideTriangle(new Point(x, y), A, B, C)) {
+  while (!isInsideTriangle(new Point(x, y), A, B, C)) {
     x = randomNumber(0, x_range);
     y = randomNumber(0, y_range);
   }
