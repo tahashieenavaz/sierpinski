@@ -8,23 +8,22 @@ const board = new Board();
 const containerTriangle = new ContainerTriangle();
 containerTriangle.draw(board);
 
-const randomPoint = pointInTriangle(
+let randomPoint = pointInTriangle(
   containerTriangle.A,
   containerTriangle.B,
   containerTriangle.C,
 );
-const randomCorner = oneOf([
-  containerTriangle.A,
-  containerTriangle.B,
-  containerTriangle.C,
-]);
-board.isolate((context) => {
-  context.arc(randomPoint.x, randomPoint.y, 1, 0, Math.PI * 2);
-  context.fillStyle = "black";
-  context.fill();
-});
-board.isolate((context) => {
-  context.moveTo(randomPoint.x, randomPoint.y);
-  context.lineTo(randomCorner.x, randomCorner.y);
-  context.stroke();
-});
+for (let i = 0; i < 100000; i++) {
+  let randomCorner = oneOf([
+    containerTriangle.A,
+    containerTriangle.B,
+    containerTriangle.C,
+  ]);
+  board.isolate((context) => {
+    context.arc(randomPoint.x, randomPoint.y, 1, 0, Math.PI * 2);
+    context.fillStyle = "black";
+    context.fill();
+  });
+  randomPoint.x = (randomPoint.x + randomCorner.x) / 2;
+  randomPoint.y = (randomPoint.y + randomCorner.y) / 2;
+}
